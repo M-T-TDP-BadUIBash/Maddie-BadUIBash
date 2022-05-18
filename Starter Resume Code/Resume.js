@@ -17,27 +17,28 @@
   });
 
   var results;
+  var resume = [];
 
   function onComplete(active) {
     switch (this.element[0].id) {
       case "machine1":
         $("#machine1Result").text(this.active);
-        results[0] = getMachineResult($('#machine1'), this.active);
+        results[0] = $('#machine1').find('span.option > span').eq(this.active + 1).text();
         break;
       case "machine2":
         $("#machine2Result").text(this.active);
-        results[1] = getMachineResult($('#machine2'), this.active);
+        results[1] = $('#machine2').find('span.option > span').eq(this.active + 1).text();
         break;
       case "machine3":
         $("#machine3Result").text(this.active);
-        results[1] = getMachineResult($('#machine3'), this.active);
+        results[2] = $('#machine3').find(':input').each(function(){
+            $(this).change(function(){
+                results[2] = this.value
+                resume.push(results)
+            });
+          })
         break;
     }
-    console.log(results.join(", "));
-  }
-
-  function getMachineResult(i_jqMachine, i_iActive){
-      return i_jqMachine.find('span.option > span').eq(i_iActive + 1).text();
   }
 
   $(".randomizeButton").click(function() {
@@ -47,7 +48,7 @@
     $('#slot-machine .arm-shadow').animate({ top: '40px' }, 380);
     $('#slot-machine .ring1 .shadow, #slot-machine .ring2 .shadow').animate({ top: '50%', opacity: 1 });
            
-      console.log("Button Pressed");
+      console.log("pull the lever kronk");
     results = [];
     machine1.shuffle(5, onComplete);
     setTimeout(function() {
@@ -64,6 +65,11 @@
         $('#slot-machine .ring1 .shadow, #slot-machine .ring2 .shadow').animate({ top: '0', opacity: 0 });
     }, 500);
   });
+
+  $("#slot-display").click(function() {
+      resset = [...new Set(resume)]
+      console.log(resset);
+  })
 
 
   /*! SlotMachine - v3.0.1 - 2016-03-03
