@@ -2,65 +2,139 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Bad Resume Entry</title>
+        <title>Lucky Resume</title>
         <meta name="description" content="Project about a resume entry form with horrible UI">
         <link rel="stylesheet" href="Resume.css?v=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../scripts/jquery.slotmachine.min.js"></script>
+            
     </head>
     <body>
-        <form id="resume-box" action="Submission.html">
-            <div id="resume-title">
-                <h1>
-                    Submit Your Resum&eacute;
-                </h1>
+
+        <div id="page">
+            <div id="content">
+                <div id="slot-machine">
+        
+                    <div id="slot-body">
+        
+                        <div id="slot-block"></div>
+        
+                        <div id="slot-frame"></div>
+        
+                        <div id="slot-glaze-bottom"></div>
+        
+                        <div id="slot-wheels">
+                            <div id="wheel1" class="wheel">
+                                <div class="overlay"></div>
+                                <div id="machine1" class="optionContainer">
+                                    <span class="option">
+                                      <span>First</span>
+                                    </span>
+                                    <span class="option">
+                                      <span>Last</span>
+                                    </span>
+                                    <span class="option">
+                                        <span>Date of</span>
+                                      </span>
+                                    <span class="option">
+                                        <span>Email</span>
+                                    </span>
+                                    <span class="option">
+                                        <span>Phone</span>
+                                    </span>
+                                    <span class="option">
+                                        <span>Home</span>
+                                    </span>
+                                    <span class="option">
+                                        <span>Optional</span>
+                                    </span>
+                                    <span class="option">
+                                        <span>File</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="wheel2" class="wheel">
+                                <div class="overlay"></div>
+                                <div id="machine2" class="optionContainer">
+                                    <span class="option">
+                                        <span>Name</span>
+                                      </span>
+                                      <span class="option">
+                                        <span>Name</span>
+                                      </span>
+                                      <span class="option">
+                                          <span>Birth</span>
+                                        </span>
+                                      <span class="option">
+                                          <span>Address</span>
+                                      </span>
+                                      <span class="option">
+                                          <span>Number</span>
+                                      </span>
+                                      <span class="option">
+                                          <span>Address</span>
+                                      </span>
+                                      <span class="option">
+                                          <span>Comments</span>
+                                      </span>
+                                      <span class="option">
+                                          <span>Upload</span>
+                                      </span>
+                                </div>
+                            </div>
+                            <div id="wheel3" class="wheel">
+                                <div class="overlay"></div>
+                                <div id="machine3" class="optionContainer">
+                                    <span class="option">
+                                        <span><input type="text" id="first-name" name="first-name" /></span>
+                                      </span>
+                                      <span class="option">
+                                        <span><input type="text" id="last-name" name="last-name" /></span>
+                                      </span>
+                                      <span class="option">
+                                          <span><input type="date" id="date" name="date" /></span>
+                                        </span>
+                                      <span class="option">
+                                          <span><input type="email" id="email" name="email" /></span>
+                                      </span>
+                                      <span class="option">
+                                          <span><input type="tel" id="phone" name="phone" value="111-222-3333" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></span>
+                                      </span>
+                                      <span class="option">
+                                          <span><input type="text" id="address" name="address" /></span>
+                                      </span>
+                                      <span class="option">
+                                          <span><textarea id="description" name="description" cols="50" rows="2" maxlength="500"></textarea></span>
+                                      </span>
+                                      <span class="option">
+                                          <span><input type="file" id="myFile" name="filename"></span>
+                                      </span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div id="slot-trigger" class="randomizeButton">
+                            <div class="arm">
+                                <div class="knob"></div>
+                            </div>
+                            <div class="arm-shadow"></div>
+                            <div class="ring1">
+                                <div class="shadow"></div>
+                            </div>
+                            <div class="ring2">
+                                <div class="shadow"></div>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div id="slot-details">
+                        <div id="slot-top"></div>
+                        <div id="slot-bottom"></div>
+                    </div>
+                </div>
             </div>
-            <div id="resume-inputs">
-                <div id="resume-name">
-                    <br />
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" />
-                    <br />
-                    <br />
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last-name" />
-                </div>
-                <div id="resume-dob">
-                    <br />
-                    <br />
-                    <label for="date">Date of Birth:</label>
-                    <input type="date" id="date" name="date" />
-                </div>
-                <div id="resume-email">
-                    <br />
-                    <br />
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" />
-                </div>
-                <div id="resume-phone">
-                    <br />
-                    <br />
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" value="111-222-3333" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
-                </div>
-                <div id="resume-address">
-                    <br />
-                    <br />
-                    <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" />
-                </div>
-                <div id="resume-description">
-                    <br />
-                    <br />
-                    <label for="description">Why should we consider you for this position?</label>
-                    <br />
-                    <textarea id="description" name="description" cols="50" rows="15" maxlength="500"></textarea>
-                </div>
-                <div id="resume-submit">
-                    <br />
-                    <br />
-                    <input id ="submit" type="submit" value="Submit" />
-                </div>
-            </div>
-        </form>
+        </div>
 
         <script src="Resume.js"></script>
     </body>
