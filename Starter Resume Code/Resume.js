@@ -34,7 +34,7 @@
         results[2] = $('#machine3').find(':input').each(function(){
             $(this).change(function(){
                 results[2] = this.value
-                resume.push(results)
+                resume.push(results[0]+" "+results[1]+": "+results[2])
             });
           })
         break;
@@ -69,6 +69,10 @@
   $("#slot-display").click(function() {
       resset = [...new Set(resume)]
       console.log(resset);
+      for(var i=0; i < resset.length; i++) {
+        $('#transactionDetails').append('<p>'+resset[i]+'</p>');
+      }
+      $('#resumecontainer').show();
   })
 
 

@@ -478,3 +478,42 @@ body {
 input {
     size:3
 }
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "VT323", monospace;
+    color: #1f1f1f;
+  }
+  
+  .resumecontainer {
+    background: #2B2B2B;
+    padding: 20px 10px;
+    display:none
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .receipt {
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .transactionDetails {
+    justify-content: space-between;
+    margin: 0 10px 10px;
+  }
+  .transactionDetails .detail {
+    text-transform: uppercase;
+  }
+  
+  
