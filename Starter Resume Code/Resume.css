@@ -1,28 +1,6 @@
-
-/*
-    Document
-*/
-
 html {
-    background: #2B2B2B;
+    background: #020202;
 }
-
-body {
-    background: transparent;
-}
-
-#page {
-    margin: 0 auto;
-}
-
-#content {
-    padding: 20px;
-}
-
-
-/*
-    Slot Machine
-*/
 
 #slot-machine {
     border-radius: 10px;
@@ -34,15 +12,15 @@ body {
 }
 
 #slot-body {
-    background: #1e8a34;
+    background: #058c42;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    border: 2px solid #1e8a34;
+    border: 2px solid #0d2818;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 0 25px rgba(13, 40, 24, 0.6);
     height: 300px;
     margin: 50px auto;
     position: relative;
@@ -51,7 +29,7 @@ body {
 }
 
 #slot-frame {
-    background: #1b1b1b;
+    background: #020202;
     background: -moz-linear-gradient(top, #1b1b1b 0%, #383838 8%, #3a3a3a 20%, #0a0a0a 47%, #010101 50%, #0d0d0d 54%, #444444 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1b1b1b), color-stop(8%,#383838), color-stop(20%,#3a3a3a), color-stop(47%,#0a0a0a), color-stop(50%,#010101), color-stop(54%,#0d0d0d), color-stop(100%,#444444));
     background: -webkit-linear-gradient(top, #1b1b1b 0%,#383838 8%,#3a3a3a 20%,#0a0a0a 47%,#010101 50%,#0d0d0d 54%,#444444 100%);
@@ -144,7 +122,7 @@ body {
 }
 
 #slot-display {
-    background: #1b1b1b;
+    background: #020202;
     background: -moz-linear-gradient(top, #1b1b1b 0%, #383838 8%, #3a3a3a 20%, #0a0a0a 47%, #010101 50%, #0d0d0d 54%, #444444 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1b1b1b), color-stop(8%,#383838), color-stop(20%,#3a3a3a), color-stop(47%,#0a0a0a), color-stop(50%,#010101), color-stop(54%,#0d0d0d), color-stop(100%,#444444));
     background: -webkit-linear-gradient(top, #1b1b1b 0%,#383838 8%,#3a3a3a 20%,#0a0a0a 47%,#010101 50%,#0d0d0d 54%,#444444 100%);
@@ -166,12 +144,12 @@ body {
     left: 50%;
     letter-spacing: 3px;
     line-height: 25px;
-    margin-left: -250px;
+    margin-left: 60px;
     font-family: "Courier New", Courier, monospace;
     font-size: 18px;
     text-align: left;
     position: absolute;
-    width: 250px;
+    width: 200px;
     z-index: 2;
 }
 
@@ -182,14 +160,9 @@ body {
 }
 
 #slot-credits {
-    color: #78FF00;
+    color: #e0e622;
     font-weight: bold;
     z-index: 2;
-}
-
-#slot-zeros {
-    color: rgba(255, 255, 255, 0.3);
-    z-index: 1;
 }
 
 #slot-overlay {
@@ -367,11 +340,9 @@ body {
 #slotTrigger.slotTriggerDown {
     background-position: 0px -17px;
 }
+
 #slotTrigger.slotTriggerDisabled {
     background-position: 0px -34px;
-    display: none;
-}
-.slotSpinAnimation {
     display: none;
 }
 
@@ -461,6 +432,7 @@ body {
     display: block;
     padding: 30px 10px 30px 10px;
     text-align: center;
+    font-family: "Courier New", Courier, monospace;
     font-size: 28px;
     display: inline-block;
     position: relative;
@@ -468,36 +440,13 @@ body {
     transform: translateY(50%);
 }
 
-.button {
-    display: inline-block;
-    margin: 0 auto;
-    font-size: 32px;
-    box-shadow: 0 7px 16px rgba(0, 0, 0, 1);
+.logo {
+    text-align: center;
 }
 
-input {
-    size:3
-}
-
-* {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "VT323", monospace;
-    color: #1f1f1f;
-  }
-  
   .resumecontainer {
-    background: #2B2B2B;
     padding: 20px 10px;
     display:none
-  }
-  
-  .bold {
-    font-weight: bold;
-  }
-  
-  .center {
-    text-align: center;
   }
   
   .receipt {
@@ -506,14 +455,20 @@ input {
     background: #fff;
     margin: 0 auto;
     padding: 10px;
+    font-family: "Courier New", Courier, monospace;
   }
   
   .transactionDetails {
     justify-content: space-between;
     margin: 0 10px 10px;
   }
-  .transactionDetails .detail {
-    text-transform: uppercase;
+
+  input{
+    border: 2px solid #058c42;
+    border-radius: 4px;
+    width: 100%;
+    padding: 8px 15px;
+    box-sizing: border-box;
   }
   
   
