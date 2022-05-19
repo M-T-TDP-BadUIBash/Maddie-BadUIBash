@@ -75,6 +75,14 @@
       $('#resumecontainer').show();
   })
 
+  $(document).on('keyup', '.numeric-only', function(event) {
+    var v = this.value;
+    if($.isNumeric(v) === false) {
+         //chop off the last char entered
+         this.value = this.value.slice(0,-1);
+    }
+ });
+
 
   /*! SlotMachine - v3.0.1 - 2016-03-03
 * https://github.com/josex2r/jQuery-SlotMachine

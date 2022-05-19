@@ -451,7 +451,7 @@ html {
   }
   
   .receipt {
-    width: 300px;
+    width: 400px;
     height: 100%;
     background: #fff;
     margin: 0 auto;
@@ -462,6 +462,7 @@ html {
   .transactionDetails {
     justify-content: space-between;
     margin: 0 10px 10px;
+    text-align: center;
   }
 
   input{
@@ -470,6 +471,22 @@ html {
     width: 100%;
     padding: 8px 15px;
     box-sizing: border-box;
+  }
+
+  .input-color-container {
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+  }
+  
+  .input-color {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 100%;
+    height: 56px;
+    border: none;
+    padding:0%
   }
 
   h1{
